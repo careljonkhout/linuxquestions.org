@@ -7,7 +7,7 @@ class Exam < ActiveRecord::Base
     current_question_index :integer, :default => 0
   end
 
-  never_show(:current_question_index, :user)
+  never_show(:current_question_index, :user, :responses)
 
   belongs_to :quiz
   belongs_to :user, :creator => true

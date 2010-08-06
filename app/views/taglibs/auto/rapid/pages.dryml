@@ -147,9 +147,6 @@
       </header>
 
       <section param="content-body">
-        <a action="new" to="&model" param="new-link">
-          <ht key="exams.actions.new">New Exam</ht>
-        </a>
 
         <page-nav param="top-page-nav"/>
 
@@ -157,6 +154,13 @@
 
         <page-nav param="bottom-page-nav"/>
 
+
+        <div param="new-form">
+          <h3 param="new-form-heading">
+            <ht key="exams.form.new.heading">New Exam</ht>
+          </h3>
+          <form with="&@invalid_record || new_for_current_user(Exam)" param/>
+        </div>
 
       </section>
     </content:>
@@ -491,6 +495,8 @@
     <body: class="show-page quiz" param/>
 
     <content: param>
+      <section-group>
+        <section param="main-content">
           <header param="content-header">
             <h2 param="heading">
               <ht key="quizzes.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
@@ -509,7 +515,7 @@
             </a>
           </header>
 
-          <section param="content-body">
+          <section param="content-body" with-flash-messages>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="quizzes.collection.heading.other" >
@@ -520,6 +526,19 @@
               <collection:questions param/>
             </section>
           </section>
+        </section>
+
+        <aside param>
+          <section param="exams-collection-section">
+            <h3 param="exams-collection-heading">
+              <ht key="exams.collection.heading.other" >
+                Exams
+              </ht>
+            </h3>
+            <collection:exams  param="exams-collection"/>
+          </section>
+        </aside>
+      </section-group>
     </content:>
 
   </page>

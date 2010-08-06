@@ -45,7 +45,7 @@ class Response < ActiveRecord::Base
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.signed_up?
+    acting_user.signed_up? && !exam.finished?
   end
 
   def update_permitted?

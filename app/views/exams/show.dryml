@@ -1,14 +1,7 @@
 <show-page>
 
-  <prepend-content-body:>
-    <% if @exam.finished? %>
-      <h5 class="your-score">Your Score:</h5>
-      <%= @exam.score %>%
-    <% end %>
-  </prepend-content-body:>
-
-  <new-link:>
-    <%= link_to "Start Exam", new_response_for_exam_path(@exam) unless @exam.finished? %>
-  </new-link:>
+  <field-list: fields='score'>
+    <score-view:><%= "#{this}%" %></score-view:>
+  </field-list>
 
 </show-page>
