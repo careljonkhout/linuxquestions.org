@@ -1,0 +1,40 @@
+qWhat option on the rm command will prompt for confirmation before each file is deleted?
+f--ask
+f--noclobber
+f-r
+f-f
+t-i
+qWhat command can be used to save standard input into a file as well as send it to standard output? Enter the command name only.
+ttee
+qWhich of the following will create a tar file containing all the files of the directory /home into a file backup.tar?
+ftar -xf backup.tar /home
+ftar -xf /home backup.tar
+ttar -cf backup.tar /home
+ftar -cf /home backup.tar
+ftar /home backup.tar
+qWhich of the following will take you back to your home directory (select all that apply)?
+fcd HOME
+tcd $HOME
+fcd USER
+fcd $USER
+tcd ˜ 
+qWhat umask value would ensure that, by default, new files and directories created would not give any permissions except to the owner?
+t077
+qWhat option is used on the rpm command so that a dependency check is not peformed before installing or upgrading a package? Just include the option, do not include the command.
+tnodeps
+qStarting from /home/user1, which of the following will finish in /var/log? Select all that apply:
+fcd ../var/log
+tcd ../../var/log
+tcd /var/log
+fcd ./../var/log
+fcd /../var/../log
+qWhat command is used to remove a variable from the bash shell?
+tunset
+Which of the following permissions have the SUID value set?
+t4755
+f2755
+f1755
+
+
+
+

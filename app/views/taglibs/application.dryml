@@ -1,0 +1,68 @@
+<include src="rapid" plugin="hobo"/>
+
+<include src="taglibs/auto/rapid/cards"/>
+<include src="taglibs/auto/rapid/pages"/>
+<include src="taglibs/auto/rapid/forms"/>
+
+<set-theme name="clean"/>
+
+<def tag="app-name">Linuxquestions.org</def>
+
+
+
+<def tag="show-page" for="Question">
+  <page merge title="#{ht 'questions.show.title', :default=>['Question'] }">
+    <content: param>
+      <header param="content-header">
+        <a action="edit" if="&can_edit?" param="edit-link">
+          <ht key="questions.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+            Edit Question
+          </ht>
+        </a>
+      </header>
+      <section param="content-body">
+        <view:question/>
+        <section param="collection-section">
+          <collection:answers param/>
+        </section>
+      </section>
+    </content:>
+  </page>
+</def>
+
+<def tag="card" for="Question">
+  <card class="question" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Answer">
+  <card class="answer" param="default" merge>
+    <view:answer/>
+    <span class="answer-correct" if="&this.correct">
+      <% if this.question.single_correct_answer? %>
+         This is the correct answer.
+      <% else %>
+        This is one of the correct answers.
+      <% end %>
+    </span>
+  </card>
+</def>
+
+<def tag="card" for="Response">
+  <card class="response" param="default" merge>
+    <h4 param="heading"><a><%= this.question.name %></a></h4>
+    Your answer:
+    <%= this.show_answers %>
+    <%= this.correct? ? " (correct)" : " (incorrect)" %>
+  </card>
+</def>
+
+<def tag="main-nav">
+  <navigation class="main-nav" merge-attrs param="default">
+    <nav-item with="&Quiz"><ht key="quizzes.nav_item">Quizzes</ht></nav-item>
+    <nav-item with="&Question"><ht key="questions.nav_item">Questions</ht></nav-item>
+  </navigation>
+</def>
