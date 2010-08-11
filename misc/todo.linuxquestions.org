@@ -1,6 +1,2 @@
-- remove home
-
-
-- exam
-  - response - new
+- in 1 keer beginnen met Quiz vanaf quiz index page
 
