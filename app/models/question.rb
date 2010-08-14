@@ -7,7 +7,7 @@ class Question < ActiveRecord::Base
     rating_average :decimal, :default => 0, :precision => 6, :scale => 2
   end
 
-  ajaxful_rateable :stars => 5, :allow_update => true, :cache_column => :rating_average
+  ajaxful_rateable # defaults are: :stars => 5, :allow_update => true, :cache_column => :rating_average
 
   belongs_to :owner, :class_name => 'User', :creator => true
   has_many :answers, :accessible => true, :dependent => :destroy

@@ -6,4 +6,5 @@ ActionController::Routing::Routes.draw do |map|
   Hobo.add_routes(map)
 
   map.rate_question 'questions/:id/rate', :controller => :questions, :action => :rate, :method => :post
+  map.rate_quiz 'quizzes/:id/rate', :controller => :quizzes, :action => :rate, :method => :post
 end

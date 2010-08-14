@@ -1,12 +1,6 @@
 <show-page>
   <prepend-content-body:>
-    <table>
-      <tr>
-        <td class="rating-label">Average Rating (click on stars to rate):</td>
-        <td><%= ratings_for @question %></td>
-      </tr>
-    </table>
-    <br/>
+    <ratings/>
   </prepend-content-body:>
 
   <after-body:>

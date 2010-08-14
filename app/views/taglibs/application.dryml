@@ -105,14 +105,19 @@
   </page>
 </def>
 
-<extend tag="page">
-  <old-page merge>
-    <stylesheets: param>
-      <stylesheet name="reset"/>
-      <theme-stylesheet/>
-      <theme-stylesheet name="rapid-ui"/>
-      <stylesheet name="application" param="app-stylesheet"/>
-      <%= ajaxful_rating_style  %>
-    </stylesheets:>
-  </old-page>
-</extend>
+<def tag="ratings">
+  <table>
+    <tr>
+      <td class="rating-label">Your rating:</td>
+      <td id="user_rating"><%= ratings_for this, :show_user_rating => true %></td>
+    </tr>
+    <tr>
+      <td class="rating-label">Average rating:</td>
+      <td id="average_rating"><%= ratings_for this %></td>
+    </tr>
+  </table>
+  <div style="padding-left: 5px" param="hint">
+    Click on any of the stars to rate this question.
+  </div>
+  <br/>
+</def>

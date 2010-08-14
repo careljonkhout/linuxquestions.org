@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100813014347) do
+ActiveRecord::Schema.define(:version => 20100814050045) do
 
   create_table "answers", :force => true do |t|
     t.string  "answer"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(:version => 20100813014347) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "owner_id"
+    t.decimal  "rating_average", :default => 0.0
   end
 
   add_index "questions", ["owner_id"], :name => "index_questions_on_owner_id"
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20100813014347) do
     t.datetime "updated_at"
     t.string   "name"
     t.integer  "owner_id"
+    t.decimal  "rating_average", :precision => 6, :scale => 2, :default => 0.0
   end
 
   add_index "quizzes", ["owner_id"], :name => "index_quizzes_on_owner_id"

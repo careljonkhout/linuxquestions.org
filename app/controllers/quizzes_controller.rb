@@ -12,4 +12,15 @@ class QuizzesController < ApplicationController
       end
     end
   end
+
+  def rate
+    @quiz = Quiz.find(params[:id])
+    @quiz.rate(params[:stars], current_user, params[:dimension])
+    render :update do |page|
+      page.replace_html 'average_rating', ratings_for(@quiz)
+      page.replace_html 'user_rating', ratings_for(@quiz, :show_user_rating => true)
+      page.visual_effect :highlight, 'average_rating'
+      page.visual_effect :highlight, 'user_rating'
+    end
+  end
 end

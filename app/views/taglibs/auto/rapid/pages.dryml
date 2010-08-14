@@ -351,7 +351,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="question" param/>
+            <field-list fields="question, rating_average" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="questions.collection.heading.other" >
@@ -516,6 +516,7 @@
           </header>
 
           <section param="content-body" with-flash-messages>
+            <field-list fields="rating_average" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="quizzes.collection.heading.other" >
