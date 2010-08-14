@@ -66,14 +66,6 @@
   </card>
 </def>
 
-<def tag="card" for="Rating">
-  <card class="rating" param="default" merge>
-    <body: param>
-      <a:user param="creator-link"/>
-    </body:>
-  </card>
-</def>
-
 <def tag="card" for="Response">
   <card class="response" param="default" merge>
     <header: param>

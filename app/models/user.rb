@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
     timestamps
   end
 
+  ajaxful_rater
+
   has_many :questions
   has_many :quizzes, :foreign_key => 'owner_id'
 

@@ -1,4 +1,8 @@
 <show-page>
+  <prepend-content-body>
+    Rating: <%= ratings_for @question %>
+
+  </prepend-content-body>
   <exams-collection-section:>
     <% @exam = Exam.new(:quiz => @quiz, :user => current_user) %>
     <% form_for @exam, :url => { :controller => 'exams', :action => 'create' } do |f|%>
@@ -7,4 +11,7 @@
       <%= f.submit 'Take this Quiz' %>
     <% end %>
   </exams-collection-section:>
+  <after-body:>
+    <%= ajaxful_rating_style %>
+  </after-body:>
 </show-page>

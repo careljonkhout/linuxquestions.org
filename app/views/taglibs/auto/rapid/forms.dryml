@@ -48,18 +48,6 @@
 
 
 
-<def tag="form" for="Rating">
-  <form merge param="default">
-    <error-messages param/>
-    <field-list fields="stars, question, user" param/>
-    <div param="actions">
-      <submit label="#{ht 'ratings.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
-    </div>
-  </form>
-</def>
-
-
-
 <def tag="form" for="Response">
   <form merge param="default">
     <error-messages param/>

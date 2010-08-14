@@ -16,7 +16,11 @@ class Quiz < ActiveRecord::Base
 
   never_show :owner
 
-  before_save { |r| r.name = "#{(r.owner.quizzes.size+1).ordinalize} Quiz by #{r.owner}" if r.name.empty? }
+  before_save do |r|
+    if r.name.empty?
+      r.name = "#{(r.owner.quizzes.size+1).ordinalize} Quiz by #{r.owner}"
+    end
+  end
 
   # --- Permissions --- #
 

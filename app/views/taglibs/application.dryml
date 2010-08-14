@@ -104,3 +104,15 @@
     </content:>
   </page>
 </def>
+
+<extend tag="page">
+  <old-page merge>
+    <stylesheets: param>
+      <stylesheet name="reset"/>
+      <theme-stylesheet/>
+      <theme-stylesheet name="rapid-ui"/>
+      <stylesheet name="application" param="app-stylesheet"/>
+      <%= ajaxful_rating_style  %>
+    </stylesheets:>
+  </old-page>
+</extend>
