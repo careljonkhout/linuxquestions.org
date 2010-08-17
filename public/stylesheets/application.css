@@ -1,13 +1,6 @@
-.your-score {
-    display:inline;
-}
-
-.question-question {
-    font-size: 16px;
-}
-.answer-correct {
-    float: right;
-}
+.your-score {display:inline;}
+.question-question {font-size: 16px;}
+.answer-correct {float: right;}
 
 .rating-label {
     vertical-align: middle;
@@ -15,12 +8,9 @@
     font-size: 15px
 }
 
-/* these 'li' and 'a' declarations are needed for ajaxful-rating */
+/* these 'li', 'a' and card a declarations are needed for ajaxful-rating */
 
-li {
-    margin-left: 0;
-}
+li { margin-left: 0; }
+a { background: none; }
+.card a { background: none; }
 
-a {
-    background: none;
-}

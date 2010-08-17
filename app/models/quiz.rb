@@ -18,6 +18,7 @@ class Quiz < ActiveRecord::Base
   has_many :exams
 
   never_show :owner
+  never_show :rating_average
 
   before_save do |r|
     if r.name.empty?
@@ -26,6 +27,8 @@ class Quiz < ActiveRecord::Base
   end
 
   # --- Permissions --- #
+
+  def empty?; false end
 
   def create_permitted?
     acting_user.signed_up?

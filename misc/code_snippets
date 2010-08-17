@@ -1,0 +1,14 @@
+
+  <content-body:>
+    new quiz
+  <table><repeat with="&@quizzes"> <quiz-table-row/></repeat></table>
+  </content-body:>
+
+
+<def tag="quiz-table-row">
+  <tr>
+  <td><h4 param="heading"><a><name/></a></h4></td>
+  <td><count:questions/></td>
+  <td><%= ratings_for this, :static, :small => true %></td>
+  </tr>
+</def>

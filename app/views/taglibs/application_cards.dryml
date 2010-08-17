@@ -1,0 +1,30 @@
+<def tag="card" for="Question">
+  <card class="question" param="default" merge>
+    <header: param>
+      <h4 param="heading"><a><name/></a></h4>
+    </header:>
+  </card>
+</def>
+
+<def tag="card" for="Answer">
+  <card class="answer" param="default" merge>
+    <view:answer/>
+    <span class="answer-correct" if="&this.correct">
+      <% if this.question.single_correct_answer? %>
+        This is the correct answer.
+      <% else %>
+        This is one of the correct answers.
+      <% end %>
+    </span>
+  </card>
+</def>
+
+<def tag="card" for="Response">
+  <card class="response" param="default" merge>
+    <h4 param="heading"><a><%= this.question.name %></a></h4>
+    Your answer:
+    <%= this.show_answers %>
+    <%= this.correct? ? " (correct)" : " (incorrect)" %>
+  </card>
+</def>
+

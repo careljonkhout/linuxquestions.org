@@ -15,6 +15,7 @@ class Question < ActiveRecord::Base
   has_many :quizzes, :through => :questions_quizzes
 
   never_show :owner
+  never_show :rating_average
 
   validates_presence_of :question
   validate :must_have_an_answer

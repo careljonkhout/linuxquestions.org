@@ -1,2 +1,6 @@
+- checken of user spoofing mogelijk is en zo ja blokkeren
+
 - in 1 keer beginnen met Quiz vanaf quiz index page
+- forward en back in exams
+- evt. User moet Exams kunnen zien
 

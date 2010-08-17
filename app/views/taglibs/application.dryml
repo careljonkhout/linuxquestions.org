@@ -8,7 +8,7 @@
 
 <def tag="app-name">Linuxquestions.org</def>
 
-
+<include src="application_cards"/>
 
 <def tag="show-page" for="Question">
   <page merge title="#{ht 'questions.show.title', :default=>['Question'] }">
@@ -28,36 +28,6 @@
       </section>
     </content:>
   </page>
-</def>
-
-<def tag="card" for="Question">
-  <card class="question" param="default" merge>
-    <header: param>
-      <h4 param="heading"><a><name/></a></h4>
-    </header:>
-  </card>
-</def>
-
-<def tag="card" for="Answer">
-  <card class="answer" param="default" merge>
-    <view:answer/>
-    <span class="answer-correct" if="&this.correct">
-      <% if this.question.single_correct_answer? %>
-        This is the correct answer.
-      <% else %>
-        This is one of the correct answers.
-      <% end %>
-    </span>
-  </card>
-</def>
-
-<def tag="card" for="Response">
-  <card class="response" param="default" merge>
-    <h4 param="heading"><a><%= this.question.name %></a></h4>
-    Your answer:
-    <%= this.show_answers %>
-    <%= this.correct? ? " (correct)" : " (incorrect)" %>
-  </card>
 </def>
 
 <def tag="main-nav">
@@ -120,4 +90,15 @@
     Click on any of the stars to rate this question.
   </div>
   <br/>
+</def>
+
+<def tag="card" for="Quiz">
+  <card class="quiz" param="default" merge>
+    <h4 param="heading" style="display:inline;"><a><name/></a></h4>
+    &nbsp;&nbsp; <count:questions/>
+    <style type="text/css">
+      .ajaxful-rating-wrapper {float:right;}
+    </style>
+    <%= ratings_for this, :static, :small => true%>
+  </card>
 </def>
