@@ -90,7 +90,7 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="answer" param/>
+            <field-list fields="answer, explanation" param/>
           </section>
     </content:>
 
@@ -332,7 +332,7 @@
 
     <content: param>
           <header param="content-header">
-            <a:quizzes param="parent-link">&laquo; <ht key="questions.actions.back" to="quizzes"><name/></ht></a:quizzes>
+            <a:owner param="parent-link">&laquo; <ht key="questions.actions.back" to="owner"><name/></ht></a:owner>
             <h2 param="heading">
               <ht key="questions.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
                 <name/>
@@ -351,7 +351,6 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="question" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="questions.collection.heading.other" >
@@ -422,6 +421,42 @@
     </content:>
   </page>
 </def>
+
+<def tag="index-for-owner-page" polymorphic/>
+<def tag="index-for-owner-page" for="Question">
+  <page merge title="#{ht 'questions.index_for_owner.title', :default=>['Questions for']} #{name :with => @owner, :no_wrapper => true}">    
+    <body: class="index-for-owner-page owner question" param/>
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">
+          <ht key="hobo.actions.back">Back to</ht> <a with="&@owner"/>
+        </div>
+
+        <h2 param="heading">
+          <ht key="questions.index_for_owner.heading.your">
+            <Your with="&@owner"/> Questions
+          </ht>
+        </h2>
+        <p param="count" if>
+          <ht key="questions.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
 
 
 
@@ -567,6 +602,42 @@
 
   </page>
 </def>
+
+<def tag="index-for-owner-page" polymorphic/>
+<def tag="index-for-owner-page" for="Quiz">
+  <page merge title="#{ht 'quizzes.index_for_owner.title', :default=>['Quizzes for']} #{name :with => @owner, :no_wrapper => true}">    
+    <body: class="index-for-owner-page owner quiz" param/>
+    <content: param>
+      <header param="content-header">
+        <div param="back-to">
+          <ht key="hobo.actions.back">Back to</ht> <a with="&@owner"/>
+        </div>
+
+        <h2 param="heading">
+          <ht key="quizzes.index_for_owner.heading.your">
+            <Your with="&@owner"/> Quizzes
+          </ht>
+        </h2>
+        <p param="count" if>
+          <ht key="quizzes.collection.count" count="&this.size">
+            There <count prefix="are"/>
+          </ht>
+        </p>
+      </header>
+
+      <section param="content-body">
+
+        <page-nav param="top-page-nav"/>
+
+        <collection param/>
+
+        <page-nav param="bottom-page-nav"/>
+      </section>
+    </content:>
+  </page>
+</def>
+
+
 
 
 
@@ -788,6 +859,8 @@
     <body: class="show-page user" param/>
 
     <content: param>
+      <section-group>
+        <section param="main-content">
           <header param="content-header">
             <h2 param="heading">
               <ht key="users.show.heading" name="&this.respond_to?(:name) ? this.name : ''">
@@ -804,9 +877,33 @@
             </a>
           </header>
 
-          <section param="content-body">
+          <section param="content-body" with-flash-messages>
             <field-list fields="email_address, state" param/>
+            <section param="collection-section">
+              <h3 param="collection-heading">
+                <ht key="users.collection.heading.your" >
+                  <Your/>Questions
+                </ht>
+              </h3>
+
+              <collection:questions param/>
+            </section>
           </section>
+        </section>
+
+        <aside param>
+          <preview-with-more:quizzes.recent param="quizzes-preview">
+            <heading:>
+              <ht key="hobo.undefined">  
+                <Your with="&@user"/> Quizzes
+              </ht>
+            </heading:>
+            <more:>
+              <ht key="hobo.actions.more">more</ht>
+            </more:>
+          </preview-with-more:quizzes.recent>
+        </aside>
+      </section-group>
     </content:>
 
   </page>

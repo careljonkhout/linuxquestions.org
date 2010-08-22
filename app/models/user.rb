@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   ajaxful_rater
 
-  has_many :questions
+  has_many :questions, :foreign_key => 'owner_id'
   has_many :quizzes, :foreign_key => 'owner_id'
 
   # This gives admin rights to the first sign-up.

@@ -2,8 +2,4 @@
   <prepend-content-body:>
     <ratings/>
   </prepend-content-body:>
-
-  <after-body:>
-    <%= ajaxful_rating_style %>
-  </after-body:>
 </show-page>

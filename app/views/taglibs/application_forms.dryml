@@ -1,0 +1,5 @@
+<extend tag="form" for="Question">
+  <old-form merge>
+    <answers-view:><input-many minimum="1"/></answers-view:>
+  </old-form>
+</extend>

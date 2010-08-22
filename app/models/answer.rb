@@ -3,8 +3,9 @@ class Answer < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    answer  :string
+    answer  :string, :required
     correct :boolean
+    explanation :text
   end
 
   belongs_to :question

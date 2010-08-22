@@ -769,10 +769,10 @@ SelectManyInput = Behavior.create({
 
     removeOne : function(el) {
         var element = this.element
-        new Effect.BlindUp(el, 
+        new Effect.BlindUp(el,
                            { duration: 0.3,
-                             afterFinish: function (ef) { 
-                                 ef.element.remove() 
+                             afterFinish: function (ef) {
+                                 ef.element.remove()
                                  element.fire("rapid:remove", { element: el })
                                  element.fire("rapid:change", { element: el })
                                  } } ) 

@@ -16,7 +16,7 @@ class QuestionsQuiz < ActiveRecord::Base
   end
 
   def update_permitted?
-    quiz.owner_is? acting_user
+    quiz.owner_is?(acting_user) || acting_user.administrator?
   end
 
   def destroy_permitted?

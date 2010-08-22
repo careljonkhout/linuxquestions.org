@@ -79,6 +79,11 @@
     <header: param>
       <h4 param="heading"><a><name/></a></h4>
     </header:>
+    <body: param>
+      <ht key="questions.collection.count" count="&this.questions.size">
+         <count:questions param/>
+      </ht>
+    </body:>
   </card>
 </def>
 

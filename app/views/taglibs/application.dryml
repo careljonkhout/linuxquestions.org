@@ -9,6 +9,7 @@
 <def tag="app-name">Linuxquestions.org</def>
 
 <include src="application_cards"/>
+<include src="application_forms"/>
 
 <def tag="show-page" for="Question">
   <page merge title="#{ht 'questions.show.title', :default=>['Question'] }">
@@ -92,13 +93,10 @@
   <br/>
 </def>
 
-<def tag="card" for="Quiz">
-  <card class="quiz" param="default" merge>
-    <h4 param="heading" style="display:inline;"><a><name/></a></h4>
-    &nbsp;&nbsp; <count:questions/>
-    <style type="text/css">
-      .ajaxful-rating-wrapper {float:right;}
-    </style>
-    <%= ratings_for this, :static, :small => true%>
-  </card>
-</def>
+<extend tag="page">
+  <old-page merge>
+    <after-body:>
+      <%= ajaxful_rating_style %>
+    </after-body:>
+  </old-page>
+</extend>

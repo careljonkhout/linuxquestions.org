@@ -12,3 +12,9 @@
   <td><%= ratings_for this, :static, :small => true %></td>
   </tr>
 </def>
+
+
+.view quiz-name {
+    float: left;
+    width: 300px;
+}

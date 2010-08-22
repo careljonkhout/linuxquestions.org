@@ -28,3 +28,12 @@
   </card>
 </def>
 
+<def tag="card" for="Quiz">
+  <card class="quiz" param="default" merge>
+    <h4 param="heading" style="display:inline;"><a><name/></a></h4> &nbsp;&nbsp;
+    <%= this.questions.count %>&nbsp;Questions ,
+     By: <a:owner param="creator-link"/>
+    <style type="text/css">.ajaxful-rating-wrapper {float:right;}</style>
+    <%= ratings_for this, :static, :small => true %>
+  </card>
+</def>

@@ -6,6 +6,8 @@ class QuestionsController < ApplicationController
 
   auto_actions_for :answers, [:new, :create]
 
+  auto_actions_for :owner, :index
+
   def rate
     @question = Question.find(params[:id])
     @question.rate(params[:stars], current_user, params[:dimension])

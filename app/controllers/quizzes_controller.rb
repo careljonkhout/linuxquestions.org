@@ -4,6 +4,8 @@ class QuizzesController < ApplicationController
 
   auto_actions :all, :except => :show
 
+  auto_actions_for :owner, :index
+
   def show
     hobo_show do
       unless current_user.signed_up?

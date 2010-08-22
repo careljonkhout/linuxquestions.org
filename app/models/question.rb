@@ -2,7 +2,7 @@ class Question < ActiveRecord::Base
   hobo_model # Don't put anything above this
 
   fields do
-    question :string
+    question :string, :required, :name => true
     timestamps
     rating_average :decimal, :default => 0, :precision => 6, :scale => 2
   end
@@ -14,20 +14,13 @@ class Question < ActiveRecord::Base
   has_many :questions_quizzes, :dependent => :destroy
   has_many :quizzes, :through => :questions_quizzes
 
-  never_show :owner
-  never_show :rating_average
+  never_show :owner, :rating_average
 
-  validates_presence_of :question
-  validate :must_have_an_answer
-  validate :must_have_one_correct_answer, :if => 'answers.size >= 1'
-
-  def must_have_an_answer
-    errors.add_to_base("You must specify at least one answer.") if answers.size < 1
-  end
+  validate :must_have_one_correct_answer
 
   def must_have_one_correct_answer
     if correct_answer_count < 1
-      errors.add_to_base('You mark at least one answer as "correct".')
+      errors.add_to_base('You must mark at least one answer as "correct".')
     end
   end
 
@@ -38,8 +31,6 @@ class Question < ActiveRecord::Base
   def single_correct_answer?; correct_answer_count == 1 end
 
   def multiple_choice?; answers.count > 1 end
-
-  def name; question end
 
   include ActionView::Helpers::TextHelper # to use truncate
 
@@ -54,7 +45,7 @@ class Question < ActiveRecord::Base
   end
 
   def update_permitted?
-    owner_is? acting_user
+    owner_is?(acting_user) || acting_user.administrator?
   end
 
   def destroy_permitted?

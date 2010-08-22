@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100814050045) do
+ActiveRecord::Schema.define(:version => 20100820180825) do
 
   create_table "answers", :force => true do |t|
     t.string  "answer"
     t.boolean "correct"
     t.integer "question_id"
+    t.text    "explanation"
   end
 
   add_index "answers", ["question_id"], :name => "index_answers_on_question_id"
