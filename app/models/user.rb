@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 
   has_many :questions, :foreign_key => 'owner_id'
   has_many :quizzes, :foreign_key => 'owner_id'
+  has_many :exams, :foreign_key => 'owner_id'
 
   # This gives admin rights to the first sign-up.
   # Just remove it if you don't want that

@@ -10,21 +10,49 @@
   <card class="answer" param="default" merge>
     <view:answer/>
     <span class="answer-correct" if="&this.correct">
-      <% if this.question.single_correct_answer? %>
+      <%- if this.question.single_correct_answer? %>
         This is the correct answer.
-      <% else %>
+      <%- else %>
         This is one of the correct answers.
-      <% end %>
+      <%- end %>
     </span>
   </card>
 </def>
 
 <def tag="card" for="Response">
   <card class="response" param="default" merge>
-    <h4 param="heading"><a><%= this.question.name %></a></h4>
-    Your answer:
-    <%= this.show_answers %>
-    <%= this.correct? ? " (correct)" : " (incorrect)" %>
+    <h4 param="heading"><a><%= this.question.question %></a></h4>
+    <span class="response-card-body">
+      <table>
+        <tr>
+          <td class="response-card-td">
+            <%= "Your #{this.answers.length == 1 ? 'answer was' : 'answers were'}:" %>
+          </td>
+          <td class="response-card-td">
+            <%= this.show_answers %>
+          </td>
+          <td class ="response-card-td">
+            <%= ( this.correct? ? "(correct)" : "(incorrect)" ) %>
+          </td>
+        </tr>
+        <%- unless this.correct? %>
+          <%- length = this.question.correct_answers.length %>
+          <tr>
+            <td class="response-card-td">
+              <%= "The correct #{length == 1 ? 'answer is' : 'answers are'}:" %>
+            </td>
+            <td class="response-card-td">
+              <%- this.question.correct_answers.each do |answer| %>
+                <%= answer.to_s + " " %>
+              <%- end -%>
+            </td>
+          </tr>
+        <%- end %>
+      </table>
+      <%- if this.question.explantion %>
+        <br/><%=  this.question.explanation %>
+      <%- end %>
+    </span>
   </card>
 </def>
 
@@ -32,8 +60,8 @@
   <card class="quiz" param="default" merge>
     <h4 param="heading" style="display:inline;"><a><name/></a></h4> &nbsp;&nbsp;
     <%= this.questions.count %>&nbsp;Questions ,
-     By: <a:owner param="creator-link"/>
-    <style type="text/css">.ajaxful-rating-wrapper {float:right;}</style>
+    By: <a:owner param="creator-link"/>
+    <style type="text/css">.ajaxful-rating-wrapper{float:right;}</style>
     <%= ratings_for this, :static, :small => true %>
   </card>
 </def>

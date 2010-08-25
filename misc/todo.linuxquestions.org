@@ -1,8 +1,10 @@
+
 ace-done:
 - my questions en my quizzes
 - quiz & questions show name (creator)
 - filter quizzes by rating and / or creator
 - motivatie antwoorden (waarom goed en waarom fout)
+
 
 
 ace:

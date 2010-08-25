@@ -2,6 +2,7 @@ class ResponsesController < ApplicationController
 
   hobo_model_controller
 
+  auto_actions :show
 
   auto_actions_for :exam, :new
 

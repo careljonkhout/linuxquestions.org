@@ -6,10 +6,10 @@
   </prepend-content-body:>
 
   <exams-collection-section:>
-    <% @exam = Exam.new(:quiz => @quiz, :user => current_user) %>
+    <% @exam = Exam.new(:quiz => @quiz, :owner => current_user) %>
     <% form_for @exam, :url => { :controller => 'exams', :action => 'create' } do |f|%>
       <%= f.hidden_field :quiz_id %>
-      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :owner_id %>
       <%= f.submit 'Take this Quiz' %>
     <% end %>
   </exams-collection-section:>

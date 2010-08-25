@@ -1,0 +1,8 @@
+<show-page>
+  <content-header:>
+    <h2>Your response for: <%= this.question.question  %></h2>
+  </content-header:>
+  <content-body:>
+    <collection:answers/>
+  </content-body:>
+</show-page>

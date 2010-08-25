@@ -9,13 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100820180825) do
+ActiveRecord::Schema.define(:version => 20100824013408) do
 
   create_table "answers", :force => true do |t|
     t.string  "answer"
     t.boolean "correct"
     t.integer "question_id"
-    t.text    "explanation"
   end
 
   add_index "answers", ["question_id"], :name => "index_answers_on_question_id"
@@ -34,12 +33,13 @@ ActiveRecord::Schema.define(:version => 20100820180825) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "quiz_id"
-    t.integer  "user_id"
+    t.integer  "owner_id"
     t.integer  "current_question_index", :default => 0
   end
 
+  add_index "exams", ["owner_id"], :name => "index_exams_on_owner_id"
+  add_index "exams", ["owner_id"], :name => "index_exams_on_user_id"
   add_index "exams", ["quiz_id"], :name => "index_exams_on_quiz_id"
-  add_index "exams", ["user_id"], :name => "index_exams_on_user_id"
 
   create_table "questions", :force => true do |t|
     t.string   "question"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20100820180825) do
     t.datetime "updated_at"
     t.integer  "owner_id"
     t.decimal  "rating_average", :default => 0.0
+    t.string   "explanation"
   end
 
   add_index "questions", ["owner_id"], :name => "index_questions_on_owner_id"

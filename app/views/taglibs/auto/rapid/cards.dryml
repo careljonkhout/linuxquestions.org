@@ -22,7 +22,7 @@
       <h4 param="heading"><a><name/></a></h4>
     </header:>
     <body: param>
-      <a:user param="creator-link"/>
+      <a:owner param="creator-link"/>
       <ht key="responses.collection.count" count="&this.responses.size">
          <count:responses param/>
       </ht>
@@ -69,7 +69,7 @@
 <def tag="card" for="Response">
   <card class="response" param="default" merge>
     <header: param>
-      <h4 param="heading"><name/></h4>
+      <h4 param="heading"><a><name/></a></h4>
     </header:>
   </card>
 </def>

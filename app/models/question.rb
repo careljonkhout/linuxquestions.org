@@ -5,6 +5,7 @@ class Question < ActiveRecord::Base
     question :string, :required, :name => true
     timestamps
     rating_average :decimal, :default => 0, :precision => 6, :scale => 2
+    explanation :string
   end
 
   ajaxful_rateable # defaults are: :stars => 5, :allow_update => true, :cache_column => :rating_average
@@ -24,12 +25,12 @@ class Question < ActiveRecord::Base
     end
   end
 
-  def correct_answer_count
-    answers.inject(0) { |count, answer| count += answer.correct ? 1 : 0 }
+  def correct_answers
+    answers.select { |answer| answer.correct }
   end
 
+  def correct_answer_count; correct_answers.size end
   def single_correct_answer?; correct_answer_count == 1 end
-
   def multiple_choice?; answers.count > 1 end
 
   include ActionView::Helpers::TextHelper # to use truncate

@@ -57,7 +57,7 @@ class Response < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    true
+    exam.owner_is? acting_user
   end
 
 end

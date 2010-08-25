@@ -10,7 +10,7 @@ class Exam < ActiveRecord::Base
   never_show(:current_question_index, :user, :responses)
 
   belongs_to :quiz
-  belongs_to :user, :creator => true
+  belongs_to :owner, :class_name => "User", :creator => true
   has_many :responses, :dependent => :destroy
 
   def current_question; quiz.questions[current_question_index] end
@@ -41,7 +41,7 @@ class Exam < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    true
+    owner_is? acting_user
   end
 
 end

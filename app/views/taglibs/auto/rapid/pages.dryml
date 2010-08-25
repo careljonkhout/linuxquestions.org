@@ -90,7 +90,6 @@
           </header>
 
           <section param="content-body">
-            <field-list fields="answer, explanation" param/>
           </section>
     </content:>
 
@@ -206,7 +205,7 @@
 
             <record-flags fields="" param/>
 
-            <a:user param="creator-link"/>
+            <a:owner param="creator-link"/>
           </header>
 
           <section param="content-body">
@@ -351,6 +350,7 @@
           </header>
 
           <section param="content-body">
+            <field-list fields="explanation" param/>
             <section param="collection-section">
               <h3 param="collection-heading">
                 <ht key="questions.collection.heading.other" >

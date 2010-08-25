@@ -11,25 +11,7 @@
 <include src="application_cards"/>
 <include src="application_forms"/>
 
-<def tag="show-page" for="Question">
-  <page merge title="#{ht 'questions.show.title', :default=>['Question'] }">
-    <content: param>
-      <header param="content-header">
-        <a action="edit" if="&can_edit?" param="edit-link">
-          <ht key="questions.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
-            Edit Question
-          </ht>
-        </a>
-      </header>
-      <section param="content-body">
-        <view:question/>
-        <section param="collection-section">
-          <collection:answers param/>
-        </section>
-      </section>
-    </content:>
-  </page>
-</def>
+
 
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
@@ -38,6 +20,8 @@
   </navigation>
 </def>
 
+
+<!-- disabled flash messages in the content-body section and removed questions -->
 <def tag="show-page" for="Quiz">
   <page merge title="#{ht 'quizzes.show.title', :default=>['Quiz'] }">
 

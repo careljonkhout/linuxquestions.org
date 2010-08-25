@@ -3,7 +3,7 @@
 <def tag="form" for="Answer">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="answer, correct, explanation, question" param/>
+    <field-list fields="answer, correct, question" param/>
     <div param="actions">
       <submit label="#{ht 'answers.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -15,7 +15,7 @@
 <def tag="form" for="Exam">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="quiz" param/>
+    <field-list fields="owner, quiz" param/>
     <div param="actions">
       <submit label="#{ht 'exams.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>
@@ -27,7 +27,7 @@
 <def tag="form" for="Question">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="question, answers" param/>
+    <field-list fields="question, explanation, answers" param/>
     <div param="actions">
       <submit label="#{ht 'questions.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

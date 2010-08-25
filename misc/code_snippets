@@ -18,3 +18,9 @@
     float: left;
     width: 300px;
 }
+
+  def concat_unless_nil object
+    unless object.nil? then concat(object.to_s) end
+  end
+
+
