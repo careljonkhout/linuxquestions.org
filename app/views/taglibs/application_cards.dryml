@@ -21,18 +21,15 @@
 
 <def tag="card" for="Response">
   <card class="response" param="default" merge>
-    <h4 param="heading"><a><%= this.question.question %></a></h4>
+    <h4 param="heading"><%= this.question.question %></h4>
     <span class="response-card-body">
       <table>
         <tr>
           <td class="response-card-td">
-            <%= "Your #{this.answers.length == 1 ? 'answer was' : 'answers were'}:" %>
+            <%= this.answers_label %>
           </td>
           <td class="response-card-td">
             <%= this.show_answers %>
-          </td>
-          <td class ="response-card-td">
-            <%= ( this.correct? ? "(correct)" : "(incorrect)" ) %>
           </td>
         </tr>
         <%- unless this.correct? %>
@@ -49,7 +46,10 @@
           </tr>
         <%- end %>
       </table>
-      <%- if this.question.explantion %>
+      <div style="float:right">
+        <%= ( this.correct? ? "(correct)" : "(incorrect)" ) %>
+      </div>
+      <%- if this.question.explanation %>
         <br/><%=  this.question.explanation %>
       <%- end %>
     </span>
@@ -61,6 +61,7 @@
     <h4 param="heading" style="display:inline;"><a><name/></a></h4> &nbsp;&nbsp;
     <%= this.questions.count %>&nbsp;Questions ,
     By: <a:owner param="creator-link"/>
+    <new-exam-form/>
     <style type="text/css">.ajaxful-rating-wrapper{float:right;}</style>
     <%= ratings_for this, :static, :small => true %>
   </card>

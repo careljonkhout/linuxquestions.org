@@ -20,15 +20,17 @@ class Response < ActiveRecord::Base
     end
   end
 
-  def text_answer_present?; text_answer != nil && !text_answer.empty? end
+  def text_answer_present?; text_answer && !text_answer.empty? end
 
-  def after_initialize; self.question = exam.current_question if question.nil? && new_record? end
+  def first?; @exam.responses[0] == self end
+  def last?; @exam.responses[-1] == self end
 
-  after_create { |r| r.exam.response_created }
+  def previous; @exam.previous_response(self) end
+  def _next; @exam.next_response(self) end
 
   def correct?
     if question.multiple_choice?
-      answers.all? { |answer| answer.correct? }
+      question.answers.select{|a| a.correct?} == answers
     else
       text_answer == question.answers[0].answer
     end
@@ -36,20 +38,31 @@ class Response < ActiveRecord::Base
 
   def show_answers
     if question.multiple_choice?
-      answers.inject('') { |str, a| str.concat a.answer + ' ' }
+      string = answers.inject('') { |str, a| str.concat a.answer + ', ' }
+      string[0..-3]
     else
       text_answer
+    end
+  end
+
+  def answers_label
+    if answers.size == 0 && !text_answer
+      'You did not give any answers.'
+    elsif answers.size == 1 || text_answer
+      'Your answer was:'
+    else
+      'Your answers were:'
     end
   end
 
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.signed_up? && !exam.finished?
+    false
   end
 
   def update_permitted?
-    exam.owner_is? acting_user
+    true
   end
 
   def destroy_permitted?
@@ -57,7 +70,7 @@ class Response < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    exam.owner_is? acting_user
+    true
   end
 
 end

@@ -2,23 +2,29 @@ class ResponsesController < ApplicationController
 
   hobo_model_controller
 
-  auto_actions :show
+  def edit
+    @response = Response.find params[:id]
+    @exam = @response.exam
+    unless current_user == @exam.owner || !current_user.signed_up? && @exam.session_id == session[:session_id]
+      raise Exception.new 'Unauthorized Request'
+    end
+  end
 
-  auto_actions_for :exam, :new
-
-  def create
-    hobo_create do
-      @exam = @response.exam
-      flash[:notice] = ''
-      unless @exam.finished?
-        if valid?
-          redirect_to new_response_for_exam_path(@response.exam)
+  def update
+    @response = Response.find params[:id]
+    @exam = @response.exam
+    if current_user == @exam.owner || !current_user.signed_up? && @exam.session_id == session[:session_id]
+      if @response.update_attributes params[:response]
+        unless @response.last?
+          redirect_to edit_response_path(@response._next)
         else
-          render :action => 'new_for_exam'
+          redirect_to @exam
         end
       else
-        redirect_to @exam
+        render :action => 'edit'
       end
+    else
+      raise Exception.new 'Unauthorized Request'
     end
   end
 end

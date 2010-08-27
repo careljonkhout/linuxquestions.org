@@ -2,12 +2,12 @@ class ExamsController < ApplicationController
 
   hobo_model_controller
 
-  auto_actions :all, :except => [:index, :new, :create, :edit, :update]
+  auto_actions :show
 
   def create
     hobo_create do
       flash[:notice] = ''
-      redirect_to new_response_for_exam_path(@exam)
+      redirect_to edit_response_path(@exam.responses.first)
     end
   end
 

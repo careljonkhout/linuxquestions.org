@@ -4,23 +4,27 @@ class Exam < ActiveRecord::Base
 
   fields do
     timestamps
-    current_question_index :integer, :default => 0
+    session_id :string
   end
 
-  never_show(:current_question_index, :user, :responses)
+  never_show :session_id
 
   belongs_to :quiz
   belongs_to :owner, :class_name => "User", :creator => true
   has_many :responses, :dependent => :destroy
 
-  def current_question; quiz.questions[current_question_index] end
+  attr_protected :responses
 
-  def response_created
-    self.current_question_index += 1
-    save false
+  after_create do |exam|
+    exam.quiz.questions.each do |question|
+      r = exam.responses.create(:question => question, :exam => exam)
+      r.save false
+    end
   end
 
-  def finished?; current_question == nil; end
+  def previous_response(current_response); responses[responses.index(current_response)-1] end
+  def next_response(current_response); responses[responses.index(current_response)+1] end
+
 
   def score
     points = responses.inject(0) { |points, response| points += response.correct? ? 1 : 0 }
@@ -29,11 +33,11 @@ class Exam < ActiveRecord::Base
   # --- Permissions --- #
   
   def create_permitted?
-    acting_user.signed_up?
+    true
   end
 
   def update_permitted?
-    owner_is? acting_user
+    false
   end
 
   def destroy_permitted?
@@ -41,7 +45,7 @@ class Exam < ActiveRecord::Base
   end
 
   def view_permitted?(field)
-    owner_is? acting_user
+    true
   end
 
 end

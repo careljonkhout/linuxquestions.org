@@ -12,15 +12,15 @@ class AnswersResponse < ActiveRecord::Base
   # --- Permissions --- #
 
   def create_permitted?
-    acting_user.signed_up?
+    response.update_permitted?
   end
 
   def update_permitted?
-    response.exam.owner_is acting_user?
+    response.update_permitted?
   end
 
   def destroy_permitted?
-    acting_user.administrator?
+    false
   end
 
   def view_permitted?(field)

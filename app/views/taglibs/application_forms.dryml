@@ -3,3 +3,49 @@
     <answers-view:><input-many minimum="1"/></answers-view:>
   </old-form>
 </extend>
+
+<extend tag="form" for="Response">
+  <old-form merge>
+    <%= hidden_field :response, :text_answer %>
+    <%- @question = @response.question %>
+    <error-messages/>
+    <h2><%= @question.question %></h2>
+    <%- if @question.multiple_choice? %>
+      <table>
+        <% @question.answers.each do |@answer| %>
+          <tr>
+            <%- if @question.single_correct_answer? %>
+              <td><%= radio_button_tag 'response[answer_ids][]', @answer.id.to_s, @response.answers.include?(@answer) %></td>
+            <%- else %>
+              <td><%= check_box_tag 'response[answer_ids][]', @answer.id.to_s,  @response.answers.include?(@answer) %></td>
+            <%- end %>
+            <td><%= @answer.answer %></td>
+          </tr>
+        <%- end %>
+      </table>
+    <%- else %>
+      Answer: <%= text_field :response, :text_answer %><br/>
+    <%- end %>
+    <br/>
+    <%= submit_tag(@response.last? ? "Save Answer and Finish Exam" : 'Save Answer and Go To Next Question') %>
+    <br/>
+    <%= link_to 'Previous Question', edit_response_path(@response.previous) unless @response.first? %>
+    <%= link_to 'Next Question', edit_response_path(@response._next) unless @response.last? %>
+  </old-form>
+</extend>
+
+
+<def tag="new-exam-form">
+  <% quiz = @quiz || this %>
+  <% if current_user.signed_up? %>
+    <% @exam = Exam.new(:quiz => quiz, :owner => current_user) %>
+  <% else %>
+    <% @exam = Exam.new(:quiz => quiz, :session_id => session[:session_id]) %>
+  <% end %>
+  <% form_for @exam, :url => { :controller => 'exams', :action => 'create' } do |f|%>
+    <%= f.hidden_field :quiz_id %>
+    <%= f.hidden_field :owner_id %>
+    <%= f.hidden_field :session_id %>
+    <%= f.submit 'Take this Quiz' %>
+  <% end %>
+</def>

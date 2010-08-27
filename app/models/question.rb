@@ -29,14 +29,31 @@ class Question < ActiveRecord::Base
     answers.select { |answer| answer.correct }
   end
 
-  def correct_answer_count; correct_answers.size end
-  def single_correct_answer?; correct_answer_count == 1 end
-  def multiple_choice?; answers.count > 1 end
+  def correct_answer_count
+    correct_answers.size
+  end
+
+  def single_correct_answer?
+    correct_answer_count == 1
+  end
+
+  def multiple_choice?
+    answers.count > 1
+  end
 
   include ActionView::Helpers::TextHelper # to use truncate
 
   def to_s # This is how a question will appear in select menu's
     truncate question, :length => 120
+  end
+
+  def show_answers
+    if multiple_choice?
+      string = correct_answers.inject('') { |str, a| str.concat a.answer + ', ' }
+      string[0..-3]
+    else
+      answer.to_s
+    end
   end
 
   # --- Permissions --- #

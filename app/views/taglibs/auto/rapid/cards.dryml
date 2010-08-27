@@ -69,7 +69,12 @@
 <def tag="card" for="Response">
   <card class="response" param="default" merge>
     <header: param>
-      <h4 param="heading"><a><name/></a></h4>
+      <h4 param="heading"><name/></h4>
+      <div param="actions">
+        <a action="edit" if="&can_edit?" param="edit-link">
+          <ht key="responses.actions.edit">Edit</ht>
+        </a>
+      </div>
     </header:>
   </card>
 </def>

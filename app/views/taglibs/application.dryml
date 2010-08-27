@@ -16,7 +16,9 @@
 <def tag="main-nav">
   <navigation class="main-nav" merge-attrs param="default">
     <nav-item with="&Quiz"><ht key="quizzes.nav_item">Quizzes</ht></nav-item>
-    <nav-item with="&Question"><ht key="questions.nav_item">Questions</ht></nav-item>
+    <% if current_user.signed_up? %>
+      <nav-item with="&Question"><ht key="questions.nav_item">Questions</ht></nav-item>
+    <% end %>
   </navigation>
 </def>
 

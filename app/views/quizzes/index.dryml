@@ -1,7 +1,3 @@
 <index-page>
   <count:></count:>
-
-  <after-body:>
-    <%= ajaxful_rating_style %>
-  </after-body:>
 </index-page>

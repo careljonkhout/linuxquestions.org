@@ -17,5 +17,5 @@ a { background: none; }
 /* now we go on with 'regular' styles */
 
 .response-card-body { font-size: 125% }
-.response-card-td { padding-right: 11px; }
+.response-card-td { padding-right: 25px; }
 

@@ -218,12 +218,6 @@
               </h3>
 
               <collection:responses param/>
-
-              <a:responses action="new" if="&can_create?(@exam.responses)" param="new-link">
-                <ht key="responses.actions.new">
-                  New Response
-                </ht>
-              </a:responses>
             </section>
           </section>
     </content:>
@@ -390,38 +384,6 @@
   </page>
 </def>
 
-
-
-<def tag="new-for-answer-page" polymorphic/>
-<def tag="new-for-answer-page" for="Question">
-  <page merge title="#{ht 'questions.new_for_owner.title', :default=>['New Question for']} #{name :with => @answer}">
-    <body: class="new-for-owner-page  question" param/>
-
-    <content: param>
-      <header param="content-header">
-        <h2 param="heading">
-          <ht key="questions.new_for_owner.heading">
-            New Question
-          </ht>
-        </h2>
-        <h3 param="subheading">
-          <ht key="questions.new_for_owner.subheading">
-            For:
-          </ht>
-          <name with="&@answer"/>
-        </h3>
-      </header>
-
-      <section param="content-body">
-        <form owner="answer" method="post" param>
-          <field-list: skip="answer"/>
-          <submit: label="#{ht 'questions.actions.create', :default=>['Create Question']}"/>
-        </form>
-      </section>
-    </content:>
-  </page>
-</def>
-
 <def tag="index-for-owner-page" polymorphic/>
 <def tag="index-for-owner-page" for="Question">
   <page merge title="#{ht 'questions.index_for_owner.title', :default=>['Questions for']} #{name :with => @owner, :no_wrapper => true}">    
@@ -457,6 +419,38 @@
 </def>
 
 
+
+
+
+<def tag="new-for-answer-page" polymorphic/>
+<def tag="new-for-answer-page" for="Question">
+  <page merge title="#{ht 'questions.new_for_owner.title', :default=>['New Question for']} #{name :with => @answer}">
+    <body: class="new-for-owner-page  question" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="questions.new_for_owner.heading">
+            New Question
+          </ht>
+        </h2>
+        <h3 param="subheading">
+          <ht key="questions.new_for_owner.subheading">
+            For:
+          </ht>
+          <name with="&@answer"/>
+        </h3>
+      </header>
+
+      <section param="content-body">
+        <form owner="answer" method="post" param>
+          <field-list: skip="answer"/>
+          <submit: label="#{ht 'questions.actions.create', :default=>['Create Question']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
 
 
 
@@ -673,13 +667,6 @@
         <page-nav param="bottom-page-nav"/>
 
 
-        <div param="new-form">
-          <h3 param="new-form-heading">
-            <ht key="responses.form.new.heading">New Response</ht>
-          </h3>
-          <form with="&@invalid_record || new_for_current_user(Response)" param/>
-        </div>
-
       </section>
     </content:>
   </page>
@@ -724,6 +711,12 @@
             </h2>
 
             <record-flags fields="" param/>
+
+            <a action="edit" if="&can_edit?" param="edit-link">
+              <ht key="responses.actions.edit" name="&this.respond_to?(:name) ? this.name : ''">
+                Edit Response
+              </ht>
+            </a>
           </header>
 
           <section param="content-body">
@@ -755,38 +748,6 @@
       </section>
     </content:>
 
-  </page>
-</def>
-
-
-
-<def tag="new-for-exam-page" polymorphic/>
-<def tag="new-for-exam-page" for="Response">
-  <page merge title="#{ht 'responses.new_for_owner.title', :default=>['New Response for']} #{name :with => @exam}">
-    <body: class="new-for-owner-page  response" param/>
-
-    <content: param>
-      <header param="content-header">
-        <h2 param="heading">
-          <ht key="responses.new_for_owner.heading">
-            New Response
-          </ht>
-        </h2>
-        <h3 param="subheading">
-          <ht key="responses.new_for_owner.subheading">
-            For:
-          </ht>
-          <a with="&@exam"/>
-        </h3>
-      </header>
-
-      <section param="content-body">
-        <form owner="exam" method="post" param>
-          <field-list: skip="exam"/>
-          <submit: label="#{ht 'responses.actions.create', :default=>['Create Response']}"/>
-        </form>
-      </section>
-    </content:>
   </page>
 </def>
 
