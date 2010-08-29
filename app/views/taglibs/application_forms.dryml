@@ -27,10 +27,15 @@
       Answer: <%= text_field :response, :text_answer %><br/>
     <%- end %>
     <br/>
-    <%= submit_tag(@response.last? ? "Save Answer and Finish Exam" : 'Save Answer and Go To Next Question') %>
-    <br/>
-    <%= link_to 'Previous Question', edit_response_path(@response.previous) unless @response.first? %>
-    <%= link_to 'Next Question', edit_response_path(@response._next) unless @response.last? %>
+    <% unless params[:review] == 'true'%>
+      <%= submit_tag(@response.last? ? "Save Answer and Finish Exam" : 'Save Answer and Go To Next Question') %>
+      <br/>
+      <%= link_to 'Previous Question', edit_response_path(@response.previous) unless @response.first? %>
+      <%= link_to 'Next Question', edit_response_path(@response._next) unless @response.last? %>
+    <% else %>
+      <%= hidden_field_tag :review, true %>
+      <%= submit_tag "Save Answer and Go Back to Review Page" %>
+    <% end %>
   </old-form>
 </extend>
 

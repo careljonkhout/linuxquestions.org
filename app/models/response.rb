@@ -14,6 +14,8 @@ class Response < ActiveRecord::Base
 
   validate :presence_of_answer
 
+  before_save { |r| r.text_answer = nil if r.text_answer == '' }
+
   def presence_of_answer
     unless text_answer_present? || !answers.empty?
       errors.add_to_base 'You did not give an answer to the question.'
@@ -41,7 +43,7 @@ class Response < ActiveRecord::Base
       string = answers.inject('') { |str, a| str.concat a.answer + ', ' }
       string[0..-3]
     else
-      text_answer
+      text_answer || ''
     end
   end
 
@@ -52,6 +54,17 @@ class Response < ActiveRecord::Base
       'Your answer was:'
     else
       'Your answers were:'
+    end
+  end
+
+  def review_answers
+    if answers.size >= 1
+      string = answers.inject('') { |str, a| str.concat a.answer + ', ' }
+      string[0..-3]
+    elsif text_answer
+      text_answer
+    else
+      'You did not give any answers.'
     end
   end
 

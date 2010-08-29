@@ -26,6 +26,13 @@ class Quiz < ActiveRecord::Base
     end
   end
 
+  validate :must_have_at_least_one_question
+
+  def must_have_at_least_one_question
+    unless questions.size >= 1
+      errors.add_to_base "You must select at least one question."
+    end
+  end
   # --- Permissions --- #
 
   def empty?; false end

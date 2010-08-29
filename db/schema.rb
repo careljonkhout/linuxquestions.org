@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100827002659) do
+ActiveRecord::Schema.define(:version => 20100828204151) do
 
   create_table "answers", :force => true do |t|
     t.string  "answer"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20100827002659) do
     t.datetime "updated_at"
     t.integer  "quiz_id"
     t.integer  "owner_id"
-    t.integer  "current_response_index", :default => 0
     t.string   "session_id"
+    t.boolean  "finished"
   end
 
   add_index "exams", ["owner_id"], :name => "index_exams_on_owner_id"

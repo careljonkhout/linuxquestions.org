@@ -1,0 +1,20 @@
+<show-page>
+
+  <content-header:><h2>Review your Answers</h2></content-header:>
+
+  <content-body:>
+    <ol>
+      <% this.responses.each do |response| %>
+        <li class="review">
+          <p><%= response.question.question %></p>
+          <p><%= response.review_answers %></p>
+          <p>
+            <%= link_to 'Change', edit_response_path(response, :review => true) %>
+          </p>
+        </li>
+        <br/>
+      <% end %>
+    </ol>
+  </content-body:>
+
+</show-page>

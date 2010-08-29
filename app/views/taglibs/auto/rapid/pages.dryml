@@ -203,7 +203,7 @@
               </ht>
             </h2>
 
-            <record-flags fields="" param/>
+            <record-flags fields="finished" param/>
 
             <a:owner param="creator-link"/>
           </header>
@@ -384,6 +384,38 @@
   </page>
 </def>
 
+
+
+<def tag="new-for-answer-page" polymorphic/>
+<def tag="new-for-answer-page" for="Question">
+  <page merge title="#{ht 'questions.new_for_owner.title', :default=>['New Question for']} #{name :with => @answer}">
+    <body: class="new-for-owner-page  question" param/>
+
+    <content: param>
+      <header param="content-header">
+        <h2 param="heading">
+          <ht key="questions.new_for_owner.heading">
+            New Question
+          </ht>
+        </h2>
+        <h3 param="subheading">
+          <ht key="questions.new_for_owner.subheading">
+            For:
+          </ht>
+          <name with="&@answer"/>
+        </h3>
+      </header>
+
+      <section param="content-body">
+        <form owner="answer" method="post" param>
+          <field-list: skip="answer"/>
+          <submit: label="#{ht 'questions.actions.create', :default=>['Create Question']}"/>
+        </form>
+      </section>
+    </content:>
+  </page>
+</def>
+
 <def tag="index-for-owner-page" polymorphic/>
 <def tag="index-for-owner-page" for="Question">
   <page merge title="#{ht 'questions.index_for_owner.title', :default=>['Questions for']} #{name :with => @owner, :no_wrapper => true}">    
@@ -419,38 +451,6 @@
 </def>
 
 
-
-
-
-<def tag="new-for-answer-page" polymorphic/>
-<def tag="new-for-answer-page" for="Question">
-  <page merge title="#{ht 'questions.new_for_owner.title', :default=>['New Question for']} #{name :with => @answer}">
-    <body: class="new-for-owner-page  question" param/>
-
-    <content: param>
-      <header param="content-header">
-        <h2 param="heading">
-          <ht key="questions.new_for_owner.heading">
-            New Question
-          </ht>
-        </h2>
-        <h3 param="subheading">
-          <ht key="questions.new_for_owner.subheading">
-            For:
-          </ht>
-          <name with="&@answer"/>
-        </h3>
-      </header>
-
-      <section param="content-body">
-        <form owner="answer" method="post" param>
-          <field-list: skip="answer"/>
-          <submit: label="#{ht 'questions.actions.create', :default=>['Create Question']}"/>
-        </form>
-      </section>
-    </content:>
-  </page>
-</def>
 
 
 

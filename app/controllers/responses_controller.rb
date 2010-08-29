@@ -5,8 +5,11 @@ class ResponsesController < ApplicationController
   def edit
     @response = Response.find params[:id]
     @exam = @response.exam
-    unless current_user == @exam.owner || !current_user.signed_up? && @exam.session_id == session[:session_id]
+    if current_user == @exam.owner || !current_user.signed_up? && @exam.session_id == session[:session_id]
+      render :edit
+    else
       raise Exception.new 'Unauthorized Request'
+
     end
   end
 
@@ -15,13 +18,13 @@ class ResponsesController < ApplicationController
     @exam = @response.exam
     if current_user == @exam.owner || !current_user.signed_up? && @exam.session_id == session[:session_id]
       if @response.update_attributes params[:response]
-        unless @response.last?
+        unless @response.last? || params[:review] == 'true'
           redirect_to edit_response_path(@response._next)
         else
           redirect_to @exam
         end
       else
-        render :action => 'edit'
+        render :edit
       end
     else
       raise Exception.new 'Unauthorized Request'

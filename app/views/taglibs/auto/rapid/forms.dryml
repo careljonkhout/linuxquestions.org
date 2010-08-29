@@ -15,7 +15,7 @@
 <def tag="form" for="Exam">
   <form merge param="default">
     <error-messages param/>
-    <field-list fields="owner, quiz" param/>
+    <field-list fields="finished, owner, quiz" param/>
     <div param="actions">
       <submit label="#{ht 'exams.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
     </div>

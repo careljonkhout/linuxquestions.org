@@ -4,6 +4,16 @@ class ExamsController < ApplicationController
 
   auto_actions :show
 
+  def show
+    hobo_show do
+      if @exam.finished
+        render 'results'
+      else
+        render 'review'
+      end
+    end
+  end
+
   def create
     hobo_create do
       flash[:notice] = ''

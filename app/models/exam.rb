@@ -5,6 +5,7 @@ class Exam < ActiveRecord::Base
   fields do
     timestamps
     session_id :string
+    finished :boolean
   end
 
   never_show :session_id

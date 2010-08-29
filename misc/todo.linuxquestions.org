@@ -1,10 +1,7 @@
-- owner_id en session_id uit new quiz form halen en i.p.v. daarvan in controller toekennen aan exam
-- minimaal 1 vraag in een quiz
-- verplcht invullen kunnen instellen in de quiz
 - vragen reviewen voor resultaten vragen en jouw antwoorden
-- geen question index voor guest
-- guest session
+- verplicht invullen kunnen instellen in de quiz
 
+- owner_id en session_id uit new quiz form halen en i.p.v. daarvan in controller toekennen aan exam
 - eventueel waarschuwen als er nog vragen niet beantwoord zijn
 
 
@@ -14,19 +11,21 @@ ace-done:
 - filter quizzes by rating and / or creator
 - motivatie antwoorden (waarom goed en waarom fout)
 - terugbladeren terwijl je examen doet (geen prio)
+- guest access (geen prio)
 
 
 
 ace:
 
 
-- guest access (geen prio)
-
----
-
 - checken of user spoofing mogelijk is en zo ja blokkeren
 
-- in 1 keer beginnen met Quiz vanaf quiz index page
 - evt. User moet Exams kunnen zien
 
 - als er slechts 1 antwoord is correct weglaten
+
+done:
+- minimaal 1 vraag in een quiz
+- in 1 keer beginnen met Quiz vanaf quiz index page
+- geen question index voor guest
+- guest session
