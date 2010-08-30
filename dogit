@@ -1,0 +1,6 @@
+git add .
+git ls-files --deleted | xargs git rm
+git commit -m `date +%A`
+git push github master
+git push heroku master
+heroku rake db:migrate
