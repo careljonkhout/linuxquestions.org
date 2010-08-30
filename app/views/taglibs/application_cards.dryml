@@ -23,7 +23,7 @@
   <card class="response" param="default" merge>
     <h4 param="heading"><%= this.question.question %></h4>
     <span class="response-card-body">
-      <table>
+      <table class="response-answers">
         <tr>
           <td class="response-card-td">
             <%= this.answers_label %>
@@ -46,9 +46,11 @@
           </tr>
         <%- end %>
       </table>
-      <div style="float:right">
-        <%= ( this.correct? ? "(correct)" : "(incorrect)" ) %>
-      </div>
+      <%- if this.correct? %>
+        <div class="response-correct">Correct</div>
+      <%- else %>
+        <div class="response-incorrect">Incorrect</div>
+      <%- end %>
       <%- if this.question.explanation %>
         <br/><%=  this.question.explanation %>
       <%- end %>
@@ -58,9 +60,9 @@
 
 <def tag="card" for="Quiz">
   <card class="quiz" param="default" merge>
-    <h4 param="heading" style="display:inline;"><a><name/></a></h4> &nbsp;&nbsp;
-    <%= this.questions.count %>&nbsp;Questions ,
-    By: <a:owner param="creator-link"/>
+    <h4 param="heading" style="display:inline;"><a><name/></a></h4>&nbsp;
+    By: <a:owner param="creator-link"/>,&nbsp;
+    <%= this.questions.count %>&nbsp;Questions
     <new-exam-form/>
     <style type="text/css">.ajaxful-rating-wrapper{float:right;}</style>
     <%= ratings_for this, :static, :small => true %>

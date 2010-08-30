@@ -21,3 +21,6 @@ a { background: none; }
 li.review { font-size: 14pt; }
 li.review p { font-size: 11pt; }
 #top-new-question-action-div { margin:10px 0 }
+.response-answers { float:left; }
+.response-correct { float:right;color:green; }
+.response-incorrect { float:right;color:red; }
