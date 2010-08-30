@@ -1,9 +1,11 @@
-h1. Quiz webapp
+Quiz webapp
+===========
 
 A quiz webapplicaion which can quiz a user. It is built with Ruby on Rails and the hobo framework on top of Ruby on Rails. ( A moderately expierenced 
 rails developer should by able to make modifications without too much trouble. )
 
-h2. Features
+Features
+--------
 
 - Registered users can submit quiz-questions.
   - Questions can be: multiple-choice-single-answer, multiple-choice-multiple-answer or "regular".
