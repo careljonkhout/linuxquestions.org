@@ -8,7 +8,7 @@ class Exam < ActiveRecord::Base
     finished :boolean
   end
 
-  never_show :session_id
+  never_show :session_ids
 
   belongs_to :quiz
   belongs_to :owner, :class_name => "User", :creator => true
@@ -38,7 +38,7 @@ class Exam < ActiveRecord::Base
   end
 
   def update_permitted?
-    false
+    true
   end
 
   def destroy_permitted?

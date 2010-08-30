@@ -1,6 +1,22 @@
+
+<def tag="form" for="Question">
+  <form merge param="default">
+    <error-messages param/>
+    <div param="actions" id="top-new-question-action-div">
+      <submit label="#{ht 'questions.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+    <field-list fields="question, explanation, answers" param/>
+    <div param="actions">
+      <submit label="#{ht 'questions.actions.save', :default=>['Save']}" param/><or-cancel param="cancel"/>
+    </div>
+  </form>
+</def>
+
 <extend tag="form" for="Question">
   <old-form merge>
-    <answers-view:><input-many minimum="1"/></answers-view:>
+    <field-list: fields="question, answers, explanation" >
+      <answers-view:><input-many minimum="1"/></answers-view:>
+    </field-list:>
   </old-form>
 </extend>
 
@@ -39,18 +55,11 @@
   </old-form>
 </extend>
 
-
 <def tag="new-exam-form">
   <% quiz = @quiz || this %>
-  <% if current_user.signed_up? %>
-    <% @exam = Exam.new(:quiz => quiz, :owner => current_user) %>
-  <% else %>
-    <% @exam = Exam.new(:quiz => quiz, :session_id => session[:session_id]) %>
-  <% end %>
+  <% @exam = Exam.new(:quiz => quiz, :session_id => session[:session_id]) %>
   <% form_for @exam, :url => { :controller => 'exams', :action => 'create' } do |f|%>
     <%= f.hidden_field :quiz_id %>
-    <%= f.hidden_field :owner_id %>
-    <%= f.hidden_field :session_id %>
     <%= f.submit 'Take this Quiz' %>
   <% end %>
 </def>

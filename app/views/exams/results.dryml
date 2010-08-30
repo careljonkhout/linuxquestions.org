@@ -1,5 +1,5 @@
 <show-page>
-
+  <content-header:><h2>Your Results</h2></content-header:>
   <field-list: fields='score'>
     <score-view:><%= "#{this}%" %></score-view:>
   </field-list>

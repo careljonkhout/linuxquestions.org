@@ -15,6 +15,10 @@
         <br/>
       <% end %>
     </ol>
+    <% form_for @exam do |f| %>
+      <%= hidden_field_tag 'exam[finished]', 'true' %>
+      <%= f.submit 'Finish Exam' %>
+    <% end %>
   </content-body:>
 
 </show-page>

@@ -1,7 +1,3 @@
-- vragen reviewen voor resultaten vragen en jouw antwoorden
-- verplicht invullen kunnen instellen in de quiz
-
-- owner_id en session_id uit new quiz form halen en i.p.v. daarvan in controller toekennen aan exam
 - eventueel waarschuwen als er nog vragen niet beantwoord zijn
 
 
@@ -12,11 +8,6 @@ ace-done:
 - motivatie antwoorden (waarom goed en waarom fout)
 - terugbladeren terwijl je examen doet (geen prio)
 - guest access (geen prio)
-
-
-
-ace:
-
 
 - checken of user spoofing mogelijk is en zo ja blokkeren
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100828204151) do
+ActiveRecord::Schema.define(:version => 20100829062840) do
 
   create_table "answers", :force => true do |t|
     t.string  "answer"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20100828204151) do
     t.datetime "updated_at"
     t.integer  "owner_id"
     t.decimal  "rating_average", :default => 0.0
-    t.string   "explanation"
+    t.text     "explanation"
   end
 
   add_index "questions", ["owner_id"], :name => "index_questions_on_owner_id"

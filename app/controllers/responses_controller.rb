@@ -9,7 +9,6 @@ class ResponsesController < ApplicationController
       render :edit
     else
       raise Exception.new 'Unauthorized Request'
-
     end
   end
 

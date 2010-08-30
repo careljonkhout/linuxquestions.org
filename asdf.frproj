@@ -1,0 +1,21 @@
+#### Properties: rubyide_project-project - Version: 1.0
+--- 
+"|": 
+- basedirectory: /home/carel/ror/linuxquestions.org
+- cmd_line_options: ""
+- default_script: ""
+- interpreter: 
+- name: asdf
+- required_directories: []
+
+- run_in_terminal: false
+- save_before_running: false
+- source_directories: 
+  - /home/carel/ror/linuxquestions.org
+- "|": 
+  - open_files: 
+    - /home/carel/ror/linuxquestions.org/app/models/user.rb
+    - /home/carel/ror/linuxquestions.org/app/models/question.rb
+  state: 
+- working_dir: ""
+properties: 

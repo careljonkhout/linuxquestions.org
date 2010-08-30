@@ -19,4 +19,5 @@ a { background: none; }
 .response-card-body { font-size: 125% }
 .response-card-td { padding-right: 25px; }
 li.review { font-size: 14pt; }
-li.review p { font-size: 14pt; }
+li.review p { font-size: 11pt; }
+#top-new-question-action-div { margin:10px 0 }

@@ -1,3 +1,4 @@
+<input-many minimum="1"/>
 
   <content-body:>
     new quiz
