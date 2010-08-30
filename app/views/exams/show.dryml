@@ -1,7 +1,0 @@
-<show-page>
-
-  <field-list: fields='score'>
-    <score-view:><%= "#{this}%" %></score-view:>
-  </field-list>
-
-</show-page>
