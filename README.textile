@@ -5,7 +5,7 @@ rails developer should by able to make modifications without too much trouble. )
 
 h2. Demo
 
-You an try out the webapp at "linuxquestions-org.heroku.org":http://linuxquestions-org.heroku.org
+You an try out the webapp at "linuxquestions-org.heroku.com":http://linuxquestions-org.heroku.com
 
 h2. Features
 
