@@ -1,0 +1,441 @@
+# Logfile created on Sat Aug 28 11:33:03 -0400 2010  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/answer_test.rb:1:in `require'
+unit/answer_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/answer_test.rb:1:in `require'
+unit/answer_test.rb:1
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+/home/carel/ror/linuxquestions.org/test/unit/../test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/carel/ror/linuxquestions.org/test/unit/quiz_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:93:in `require_file'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:109:in `add_to_suites'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:108:in `each'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:108:in `add_to_suites'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:65:in `parse_args'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:58:in `loop'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:58:in `parse_args'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:166:in `run_mediator'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:209
+Unable to load quiz_rating, underlying cause no such file to load -- quiz_rating 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+/home/carel/ror/linuxquestions.org/test/unit/../test_helper.rb:35
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/home/carel/ror/linuxquestions.org/test/unit/quiz_test.rb:1
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:93:in `require_file'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:109:in `add_to_suites'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:108:in `each'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:108:in `add_to_suites'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:65:in `parse_args'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:58:in `loop'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:58:in `parse_args'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:166:in `run_mediator'
+/usr/local/netbeans-6.9/ruby/nb_test_mediator.rb:209
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (5.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Unable to load answered_question, underlying cause no such file to load -- answered_question 
+
+ /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:158:in `require'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:265:in `require_or_load'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:224:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:136:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:853:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:868:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:865:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/fixtures.rb:848:in `fixtures'
+./unit/../test_helper.rb:35
+unit/quiz_test.rb:1:in `require'
+unit/quiz_test.rb:1
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "questions" INNER JOIN "questions_quizzes" ON "questions".id = "questions_quizzes".question_id WHERE (("questions_quizzes".quiz_id = NULL)) [0m
